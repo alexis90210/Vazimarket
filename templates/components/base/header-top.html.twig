@@ -1,0 +1,56 @@
+<div class="header-top">
+	<div class="container" id="hide-top-header-info">
+		<div class="header-left">
+			<p class="welcome-msg ls-normal">Welcome to Riode store message or remove it!</p>
+		</div>
+		<div class="header-right">
+
+			<!-- End DropDown Menu -->
+			<span class="divider"></span>
+			<a href="/store-list" class="contact d-lg-show">
+				<i class="d-icon-map"></i>Vendors</a>
+			<a href="#" class="help d-lg-show">
+				<i class="d-icon-info"></i>
+				My Account</a>
+			<a class="login-link" href="/login" data-toggle="login-modal">
+				<i class="d-icon-user"></i>Sign in</a>
+			<span class="delimiter">/</span>
+			<a class="register-link ml-0" href="/login" data-toggle="login-modal">Register</a>
+			<!-- End of Login -->
+		</div>
+	</div>
+
+    <div class="col-12 d-lg-none sticky-mobile" id="mobile-search-bar-sticky">     
+        {% include "components/base/mobile-menu-search.html.twig" %}           
+    </div>
+
+</div>
+
+<script>
+
+   ['resize','scroll'].map( el => {
+     window.addEventListener(el, (event) => {
+
+            var dom = document.querySelector('#hide-top-header-info')
+            var search = document.querySelector('#mobile-search-bar-sticky')
+
+        if ( el == 'scroll') {
+                search.classList.remove('d-none')              
+            
+        } else {
+            const max = window.innerWidth <= 750
+            if ( max ) {
+                dom.classList.add('d-none')
+                search.classList.remove('d-none')
+            }  else {
+                dom.classList.remove('d-none')
+                search.classList.add('d-none')        
+            }               
+        }
+                       
+        })
+   })
+
+
+
+</script>

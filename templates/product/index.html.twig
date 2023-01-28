@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Product
+{% endblock %}
+
+{% block body %}
+	<main class="main single-product">
+		<div class="page-content mb-10 pb-6">
+			<div class="container">
+
+				{% include "components/product/breadcrumb.html.twig" %}
+
+				<div class="row gutter-lg">
+					<div class="col-xl-9 col-lg-8">
+						<div class="product product-single row mb-5">
+
+							{% include "components/product/product-gallery.html.twig" %}
+
+							{% include "components/product/product-details.html.twig" %}
+
+						</div>
+
+						<div class="tab tab-nav-simple product-tabs">
+							<ul class="nav nav-tabs justify-content-center" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" href="#product-tab-description">Description</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#product-tab-additional">Additional information</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#product-tab-shipping-returns">Shipping &amp;
+										                                            Returns</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#product-tab-reviews">Reviews (1)</a>
+								</li>
+							</ul>
+							<div class="tab-content">
+
+								{% include "components/product/product-tab-description.html.twig" %}
+
+								{% include "components/product/product-tab-additional.html.twig" %}
+
+								{% include "components/product/product-tab-shipping-returns.html.twig" %}
+
+								{% include "components/product/product-tab-reviews.html.twig" %}
+
+
+							</div>
+						</div>
+
+						{% include "components/product/related-products.html.twig" %}
+
+					</div>
+
+					<aside class="col-xl-3 col-lg-4 sidebar right-sidebar sidebar-fixed sticky-sidebar-wrapper">
+						<div class="sidebar-overlay"></div>
+						<a class="sidebar-close" href="#">
+							<i class="d-icon-times"></i>
+						</a>
+						<a href="#" class="sidebar-toggle">
+							<i class="fas fa-chevron-left"></i>
+						</a>
+						<div class="sidebar-content">
+							<div class="sticky-sidebar">
+                            
+								{% include "components/product/vendor-info.html.twig" %}
+
+								{% include "components/product/contact-form.html.twig" %}
+
+								{% include "components/product/vendor-products.html.twig" %}
+
+								<!-- End Widget Products -->
+							</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+
+	</main>
+{% endblock %}
