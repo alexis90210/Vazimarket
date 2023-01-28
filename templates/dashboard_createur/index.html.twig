@@ -1,20 +1,44 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DashboardCreateurController!{% endblock %}
+{% block title %}Dashboard Createur
+{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% block vazimarketStyle %}
+	{% include "components/dashboard/css.html.twig" %}
+{% endblock %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{% block vazimarket %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/hisoka/Documents/Hisoka/HL PROJECTS/SYMFONY/Vazimarket/src/Controller/DashboardCreateurController.php'|file_link(0) }}">src/Controller/DashboardCreateurController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/hisoka/Documents/Hisoka/HL PROJECTS/SYMFONY/Vazimarket/templates/dashboard_createur/index.html.twig'|file_link(0) }}">templates/dashboard_createur/index.html.twig</a></code></li>
-    </ul>
-</div>
+	{% block body %}
+
+		<div id="layout-wrapper">
+
+			{% include "components/dashboard/page-topbar.html.twig" %}
+
+			{% include "components/dashboard/vertical-menu.html.twig" %}
+
+			<div class="main-content">
+				<div class="page-content">
+
+					{% include "components/dashboard/page-title-box.html.twig" %}
+
+					<div class="container-fluid">
+						{% include "components/dashboard/page-content-wrapper.html.twig" %}
+					</div>
+				</div>
+
+				{% include "components/dashboard/footer.html.twig" %}
+
+			</div>
+		</div>
+
+		{% include "components/dashboard/rightside.html.twig" %}
+
+		<div class="rightbar-overlay"></div>
+
+
+	{% endblock %}
+
+	{% include "components/dashboard/js.html.twig" %}
+
 {% endblock %}
