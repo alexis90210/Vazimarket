@@ -4,7 +4,8 @@
 {% endblock %}
 {% block header %}{% endblock %}
 {% block body %}
-<link rel="stylesheet" type="text/css" href="{{ asset('theme/css/style.min.css')}}">
+	{% include "components/base/header-logo.html.twig" %}
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/css/style.min.css')}}">
 	<main class="main checkout">
 		<div class="page-content pt-7 pb-10 mb-10">
 			<div class="step-by pr-4 pl-4">
@@ -27,7 +28,7 @@
 					</div>
 					<div class="alert-body collapsed" id="alert-body1">
 						<p>If you have shopped with us before, please enter your details below.
-															If you are a new customer, please proceed to the Billing section.</p>
+																						If you are a new customer, please proceed to the Billing section.</p>
 						<div class="row cols-md-2">
 							<form class="mb-4 mb-md-0">
 								<label for="username">Username Or Email *</label>
@@ -42,7 +43,7 @@
 							<div class="form-checkbox pt-0 mb-0">
 								<input type="checkbox" class="custom-checkbox" id="signin-remember" name="signin-remember"/>
 								<label class="form-control-label" for="signin-remember">Remember
-																			Me</label>
+																												Me</label>
 							</div>
 							<a href="#" class="lost-link">Lost your password?</a>
 						</div>
@@ -68,7 +69,7 @@
 						<div class="check-coupon-box d-flex">
 							<input type="text" name="coupon_code" class="input-text form-control text-grey ls-m mr-4 mb-4" id="coupon_code" value="" placeholder="Coupon code">
 							<button type="submit" class="btn btn-dark btn-rounded btn-outline mb-4">Apply
-																	Coupon</button>
+																									Coupon</button>
 						</div>
 					</div>
 				</div>
@@ -126,12 +127,12 @@
 							<div class="form-checkbox mb-0">
 								<input type="checkbox" class="custom-checkbox" id="create-account" name="create-account">
 								<label class="form-control-label ls-s" for="create-account">Create an
-																			account?</label>
+																												account?</label>
 							</div>
 							<div class="form-checkbox mb-6">
 								<input type="checkbox" class="custom-checkbox" id="different-address" name="different-address">
 								<label class="form-control-label ls-s" for="different-address">Ship to a different
-																			address?</label>
+																												address?</label>
 							</div>
 							<h2 class="title title-simple text-uppercase text-left">Additional Information</h2>
 							<label>Order Notes (Optional)</label>
@@ -183,7 +184,7 @@
 															<div class="custom-radio">
 																<input type="radio" id="free-shipping" name="shipping" class="custom-control-input">
 																<label class="custom-control-label" for="free-shipping">Free
-																																			shipping</label>
+																																																				shipping</label>
 															</div>
 														</li>
 
@@ -216,14 +217,14 @@
 											<div id="collapse1" class="expanded" style="display: block;">
 												<div class="card-body ls-m">
 													Please send a check to Store Name, Store Street,
-																											Store Town, Store State / County, Store Postcode.
+																																								Store Town, Store State / County, Store Postcode.
 												</div>
 											</div>
 										</div>
 										<div class="card">
 											<div class="card-header">
 												<a href="#collapse2" class="expand text-body text-normal ls-m">Cash
-																											on delivery</a>
+																																								on delivery</a>
 											</div>
 											<div id="collapse2" class="collapsed">
 												<div class="card-body ls-m">
@@ -241,7 +242,7 @@
 										</label>
 									</div>
 									<button type="submit" class="btn btn-dark btn-rounded btn-order">Place
-																					Order</button>
+																															Order</button>
 								</div>
 							</div>
 						</aside>

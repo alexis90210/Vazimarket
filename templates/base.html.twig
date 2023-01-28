@@ -13,29 +13,34 @@
 		name="author" content="D-THEMES">
 
 		<!-- Favicon -->
-		<link
-		rel="icon" type="image/png" href="{{ asset('theme/images/icons/favicon.png')}}">
-		<!-- Preload Font -->
-		<link rel="preload" href="{{ asset('theme/fonts/riode.ttf?5gap68')}}" as="font" type="font/woff2" crossorigin="anonymous">
-		<link rel="preload" href="{{ asset('theme/vendor/fontawesome-free/webfonts/fa-solid-900.woff2')}}" as="font" type="font/woff2" crossorigin="anonymous">
-		<link rel="preload" href="{{ asset('theme/vendor/fontawesome-free/webfonts/fa-brands-400.woff2')}}" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="icon" type="image/png" href="{{ asset('theme/images/icons/favicon.png')}}">
 
-		<script src="{{ asset('main.js')}}"></script>
 
-		<link rel="stylesheet" type="text/css" href="{{ asset('theme/vendor/fontawesome-free/css/all.min.css')}}">
-		<link
-		rel="stylesheet" type="text/css" href="{{ asset('theme/vendor/animate/animate.min.css')}}">
+		{% block vazimarketStyle %}
 
-		<!-- Plugins CSS File -->
-		<link rel="stylesheet" type="text/css" href="{{ asset('theme/vendor/magnific-popup/magnific-popup.min.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{ asset('theme/vendor/owl-carousel/owl.carousel.min.css')}}">
+			<!-- Preload Font -->
+			<link rel="preload" href="{{ asset('theme/fonts/riode.ttf?5gap68')}}" as="font" type="font/woff2" crossorigin="anonymous">
+			<link rel="preload" href="{{ asset('theme/vendor/fontawesome-free/webfonts/fa-solid-900.woff2')}}" as="font" type="font/woff2" crossorigin="anonymous">
+			<link rel="preload" href="{{ asset('theme/vendor/fontawesome-free/webfonts/fa-brands-400.woff2')}}" as="font" type="font/woff2" crossorigin="anonymous">
 
-		<link
-		rel="stylesheet" type="text/css" href="{{ asset('theme/vendor/sticky-icon/stickyicon.css')}}">
+			<script src="{{ asset('main.js')}}"></script>
 
-		<!-- Main CSS File -->
-		<link rel="stylesheet" type="text/css" href="{{ asset('theme/css/market2.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css')}}">
+			<link rel="stylesheet" type="text/css" href="{{ asset('theme/vendor/fontawesome-free/css/all.min.css')}}">
+			<link
+			rel="stylesheet" type="text/css" href="{{ asset('theme/vendor/animate/animate.min.css')}}">
+
+			<!-- Plugins CSS File -->
+			<link rel="stylesheet" type="text/css" href="{{ asset('theme/vendor/magnific-popup/magnific-popup.min.css')}}">
+			<link rel="stylesheet" type="text/css" href="{{ asset('theme/vendor/owl-carousel/owl.carousel.min.css')}}">
+
+			<link
+			rel="stylesheet" type="text/css" href="{{ asset('theme/vendor/sticky-icon/stickyicon.css')}}">
+
+			<!-- Main CSS File -->
+			<link rel="stylesheet" type="text/css" href="{{ asset('theme/css/market2.css')}}">
+			<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css')}}">
+
+		{% endblock %}
 
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
@@ -46,56 +51,55 @@
 		{% endblock %}
 	</head>
 	<body class="home market">
-		<div class="page-wrapper">
-			<h1 class="d-none">Riode - Responsive eCommerce HTML Template</h1>
+		{% block vazimarket %}
+			<div class="page-wrapper">
+				<h1 class="d-none">Riode - Responsive eCommerce HTML Template</h1>
 
-			{% block header %}
-				{% include "components/base/header.html.twig" %}
+				{% block header %}
+					{% include "components/base/header.html.twig" %}
+				{% endblock %}
+
+				<!-- End Header -->
+
+				{% block body %}{% endblock %}
+
+				<!-- End Main -->
+				{% block footer %}
+					{% include "components/base/footer.html.twig" %}
+				{% endblock %}
+
+				<!-- End Footer -->
+			</div>
+			<!-- Sticky Footer -->
+			{% block footerSticky %}
+				{% include "components/base/sticky-footer.html.twig" %}
 			{% endblock %}
+			<!-- Scroll Top -->
+			<a id="scroll-top" href="#top" title="Top" role="button" class="scroll-top">
+				<i class="d-icon-arrow-up"></i>
+			</a>
 
-			<!-- End Header -->
+			<!-- MobileMenu -->
+			{% include "components/base/mobile-menu.html.twig" %}
 
-			{% block body %}{% endblock %}
+			<!-- newsletter-popup type4 -->
+			{% include "components/base/newsletter-popup.html.twig" %}<!-- sticky icons-->
+			{# {% include "components/base/sticky-icons-wrapper.html.twig" %} #}
 
-			<!-- End Main -->
-			{% block footer %}
-				{% include "components/base/footer.html.twig" %}
-			{% endblock %}
 
-			<!-- End Footer -->
-		</div>
-		<!-- Sticky Footer -->
-		{% block footerSticky %}
-			{% include "components/base/sticky-footer.html.twig" %}
+			<!-- Plugins JS File --><script src="{{ asset('theme/vendor/jquery/jquery.min.js') }}"> </script>
+			<script src="{{ asset('theme/vendor/jquery.plugin/jquery.plugin.min.js') }}"></script>
+			<script src="{{ asset('theme/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+			<script src="{{ asset('theme/vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+			<script src="{{ asset('theme/vendor/owl-carousel/owl.carousel.min.js') }}"></script>
+			<script src="{{ asset('theme/vendor/isotope/isotope.pkgd.min.js') }}"></script>
+			<script src="{{ asset('theme/vendor/photoswipe/photoswipe.min.js') }}"></script>
+			<script src="{{ asset('theme/vendor/photoswipe/photoswipe-ui-default.min.js') }}"></script>
+			<script src="{{ asset('theme/vendor/elevatezoom/jquery.elevatezoom.min.js') }}"></script>
+			<script src="{{ asset('theme/vendor/jquery.countdown/jquery.countdown.min.js') }}"></script>
+			<!-- Main JS File -->
+			<script src="{{ asset('theme/js/main.js') }}"></script>
+
 		{% endblock %}
-		<!-- Scroll Top -->
-		<a id="scroll-top" href="#top" title="Top" role="button" class="scroll-top">
-			<i class="d-icon-arrow-up"></i>
-		</a>
-
-		<!-- MobileMenu -->
-		{% include "components/base/mobile-menu.html.twig" %}
-
-		<!-- newsletter-popup type4 -->
-		{% include "components/base/newsletter-popup.html.twig" %}
-
-		<!-- sticky icons-->
-		{# {% include "components/base/sticky-icons-wrapper.html.twig" %} #}
-
-
-		<!-- Plugins JS File -->
-		<script src="{{ asset('theme/vendor/jquery/jquery.min.js') }}"></script>
-		<script src="{{ asset('theme/vendor/jquery.plugin/jquery.plugin.min.js') }}"></script>
-		<script src="{{ asset('theme/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
-		<script src="{{ asset('theme/vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
-		<script src="{{ asset('theme/vendor/owl-carousel/owl.carousel.min.js') }}"></script>
-		<script src="{{ asset('theme/vendor/isotope/isotope.pkgd.min.js') }}"></script>
-		<script src="{{ asset('theme/vendor/photoswipe/photoswipe.min.js') }}"></script>
-		<script src="{{ asset('theme/vendor/photoswipe/photoswipe-ui-default.min.js') }}"></script>
-		<script src="{{ asset('theme/vendor/elevatezoom/jquery.elevatezoom.min.js') }}"></script>
-		<script src="{{ asset('theme/vendor/jquery.countdown/jquery.countdown.min.js') }}"></script>
-		<!-- Main JS File -->
-		<script src="{{ asset('theme/js/main.min.js') }}"></script>
-
 	</body>
 </html>
