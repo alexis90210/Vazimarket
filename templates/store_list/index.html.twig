@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Store list
+{% block title %}Liste des magasins
 {% endblock %}
 
 {% block body %}
@@ -14,22 +14,22 @@
 								<i class="d-icon-home"></i>
 							</a>
 						</li>
-						<li>Store List</li>
+					<li>Liste des boutiques</li>
 					</ul>
 				</nav>
 				<div class="toolbox">
 					<div class="toolbox-left mb-4 mb-md-0">
 						<a href="#" class="toolbox-item btn btn-outline btn-dark
 								                                btn-rounded btn-icon-left form-toggle-btn">
-							<i class="d-icon-filter-2"></i>Filter</a>
-						<p class="store-count">Total store showing: 6</p>
+							<i class="d-icon-filter-2"></i>Filtrer</a>
+<p class="store-count">Nombre total de magasins affichés : 6</p>
 					</div>
 					<div class="toolbox-right">
 						<div class="toolbox-item toolbox-sort select-box text-dark">
-							<label class="d-block">Sort By:</label>
-							<select name="orderby" class="form-control">
-								<option value="default" selected="selected">Most Recent</option>
-								<option value="popularity">Most Popular</option>
+<label class="d-block">Trier par :</label>
+<select name="orderby" class="form-control">
+<option value="default" selected="selected">Le plus récent</option>
+<option value="popularity">Les plus populaires</option>
 							</select>
 						</div>
 						<div class="toolbox-item toolbox-layout">
@@ -39,8 +39,8 @@
 				</div>
 				<div class="form-wrapper">
 					<form action="#" class="input-wrapper-inline">
-						<input type="email" class="form-control" name="vendor" id="vendor" placeholder="Search Vendors" required="">
-						<button class="btn btn-primary btn-rounded" type="submit">Apply</button>
+						<input type="email" class="form-control" name="vendor" id="vendor" placeholder="Rechercher des fournisseurs" required="">
+						<button class="btn btn-primary btn-rounded" type="submit">Appliquer</button>
 					</form>
 				</div>
 				<div class="row cols-lg-3 cols-sm-2 cols-1 mt-4">
@@ -53,8 +53,8 @@
 							</div>
 							<div class="store-content">
 								<h2 class="store-title">
-									<a href="/vendor">Vendor</a>
-									<span class="featured-label">Featured</span>
+									<a href="/vendor">Vendeur</a>
+<span class="featured-label">En vedette</span>
 								</h2>
 								<div class="ratings-container">
 									<span class="ratings-full" title="Rated 4.65 out of 5">
@@ -63,9 +63,9 @@
 								</div>
 								<p>
 									<span class="street">Steven Street,</span><br>
-									<span class="city">El Carjon,</span><br>
-									<span class="state">California,</span>
-									<span class="Country">United States (US)</span>
+<span class="city">El Carjon,</span><br>
+<span class="state">Californie,</span>
+<span class="Pays">États-Unis (US)</span>
 								</p>
 								<div class="store-phone">
 									<i class="fa fa-phone"></i>123456789
@@ -75,7 +75,7 @@
 								<figure class="seller-avatar">
 									<img src="{{ asset('theme/images/vendor/avatar/1.jpg') }}" alt="Vendor avatar" width="64" height="64"/>
 								</figure>
-								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visit Store<i class="d-icon-arrow-right"></i>
+								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visiter le magasin<i class="d-icon-arrow-right"></i>
 								</a>
 							</div>
 						</div>
@@ -108,7 +108,7 @@
 								<figure class="seller-avatar">
 									<img src="{{ asset('theme/images/vendor/avatar/2.jpg') }}" alt="Vendor avatar" width="64" height="64"/>
 								</figure>
-								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visit Store<i class="d-icon-arrow-right"></i>
+								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visiter le magasin<i class="d-icon-arrow-right"></i>
 								</a>
 							</div>
 						</div>
@@ -141,7 +141,7 @@
 								<figure class="seller-avatar">
 									<img src="{{ asset('theme/images/vendor/avatar/3.jpg') }}" alt="Vendor avatar" width="64" height="64"/>
 								</figure>
-								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visit Store<i class="d-icon-arrow-right"></i>
+								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visiter le magasin<i class="d-icon-arrow-right"></i>
 								</a>
 							</div>
 						</div>
@@ -174,7 +174,7 @@
 								<figure class="seller-avatar">
 									<img src="{{ asset('theme/images/vendor/avatar/4.jpg') }}" alt="Vendor avatar" width="64" height="64"/>
 								</figure>
-								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visit Store<i class="d-icon-arrow-right"></i>
+								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visiter le magasin<i class="d-icon-arrow-right"></i>
 								</a>
 							</div>
 						</div>
@@ -207,7 +207,7 @@
 								<figure class="seller-avatar">
 									<img src="{{ asset('theme/images/vendor/avatar/5.jpg') }}" alt="Vendor avatar" width="64" height="64"/>
 								</figure>
-								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visit Store<i class="d-icon-arrow-right"></i>
+								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visiter le magasin<i class="d-icon-arrow-right"></i>
 								</a>
 							</div>
 						</div>
@@ -221,7 +221,7 @@
 							</div>
 							<div class="store-content">
 								<h2 class="store-title">
-									<a href="/vendor">Vendor6</a>
+									<a href="/vendor">Vendeur</a>
 								</h2>
 								<div class="ratings-container">
 									<span class="ratings-full" title="Rated 4.65 out of 5">
@@ -240,7 +240,7 @@
 								<figure class="seller-avatar">
 									<img src="{{ asset('theme/images/vendor/avatar/6.jpg') }}" alt="Vendor avatar" width="64" height="64"/>
 								</figure>
-								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visit Store<i class="d-icon-arrow-right"></i>
+								<a href="/vendor" class="btn btn-dark btn-link btn-underline">Visiter le magasin<i class="d-icon-arrow-right"></i>
 								</a>
 							</div>
 						</div>
