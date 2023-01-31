@@ -6,13 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ProductController extends AbstractController
+#[Route('/dashboard')]
+class PaiementModeController extends AbstractController
 {
-    #[Route('/product', name: 'app_product')]
+    #[Route('/paiement-modes', name: 'app_paiement_mode')]
     public function index(): Response
     {
-        return $this->render('product/index.html.twig', [
-            'hide_sticky_menu_bottom' => true,
+        return $this->render('paiement_mode/index.html.twig', [
+            'controller_name' => 'PaiementModeController',
         ]);
     }
 }

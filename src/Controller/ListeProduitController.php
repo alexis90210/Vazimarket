@@ -6,13 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ProductController extends AbstractController
+#[Route('/dashboard')]
+class ListeProduitController extends AbstractController
 {
-    #[Route('/product', name: 'app_product')]
+    #[Route('/produits', name: 'app_liste_produit')]
     public function index(): Response
     {
-        return $this->render('product/index.html.twig', [
-            'hide_sticky_menu_bottom' => true,
+        return $this->render('liste_produit/index.html.twig', [
+            'controller_name' => 'ListeProduitController',
         ]);
     }
 }

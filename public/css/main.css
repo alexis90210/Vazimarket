@@ -6,22 +6,15 @@
     padding: 20px !important;
     z-index: 200;
     background-color: white;
-    animation: show 3s ease-out;
-    animation-fill-mode: forwards;
 }
 
-@keyframes show {
-    
-    10% {
-        display: block; 
+@media (max-width:800px) {
+    .disp-none-xs {
+        display: none !important;
     }
 
-    70% {
-        animation-fill-mode: backwards;
-    }
-
-    100% {
-        display: none;
+    .never-clear {
+        display: block !important;
     }
     
 }

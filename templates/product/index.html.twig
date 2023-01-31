@@ -20,6 +20,15 @@
 
 						</div>
 
+						<a href="#alert-chat">
+							<div class="alert alert-light alert-primary alert-icon mb-4 card-header">
+								<i class="fas fa-exclamation-circle"></i>
+								<span class="text-body">
+									Avez-vous des questions ?</span>
+								<span class="text-primary">Cliquez ici pour le chat</span>
+							</div>
+						</a>
+
 						<div class="tab tab-nav-simple product-tabs">
 							<ul class="nav nav-tabs justify-content-center" role="tablist">
 								<li class="nav-item">
@@ -70,8 +79,8 @@
 
 												<div class="comment-content mb-2">
 													<p>Sed pretium, ligula sollicitudin laoreet viverra, tortor libero
-																																																						                                                        sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut
-																																																						                                                        justo. Suspendisse potenti.
+																																																																																		                                                        sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut
+																																																																																		                                                        justo. Suspendisse potenti.
 													</p>
 												</div>
 												<a href="#" class="btn btn-link btn-reveal-right">REPLY<i class="d-icon-arrow-right"></i>
@@ -90,7 +99,7 @@
 													<div class="comment-body">
 														<div class="comment-user">
 															<span class="comment-date">November 9, 2018 at 2:19
-																																																														                                                                pm</span>
+																																																																																														                                                                pm</span>
 															<h4>
 																<a href="#">Lena Knight</a>
 															</h4>
@@ -124,8 +133,8 @@
 
 												<div class="comment-content mb-2">
 													<p>Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod
-																																																						                                                        dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu,
-																																																						                                                        dapibus eu, fermentum et, dapibus sed, urna.</p>
+																																																																																		                                                        dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu,
+																																																																																		                                                        dapibus eu, fermentum et, dapibus sed, urna.</p>
 												</div>
 												<a href="#" class="btn btn-link btn-reveal-right">REPLY<i class="d-icon-arrow-right"></i>
 												</a>
@@ -135,7 +144,7 @@
 								</ul>
 							</div>
 							<!-- End Comments -->
-							<div class="reply">
+							<div class="reply" id="alert-chat">
 								<div class="title-wrapper text-left">
 									<h3 class="title title-simple text-left text-normal">Laisser un commentaire</h3>
 									<p>Votre adresse e-mail ne sera pas publiée. Les champs obligatoires sont marqués *</p>
@@ -187,4 +196,7 @@
 		</div>
 
 	</main>
+{% endblock %}
+{% block footer %}
+	{% include "components/base/footer-copy.html.twig" %}
 {% endblock %}

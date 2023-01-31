@@ -6,13 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ProductController extends AbstractController
+#[Route('/dashboard')]
+class CommandesController extends AbstractController
 {
-    #[Route('/product', name: 'app_product')]
+    #[Route('/commandes', name: 'app_commandes')]
     public function index(): Response
     {
-        return $this->render('product/index.html.twig', [
-            'hide_sticky_menu_bottom' => true,
+        return $this->render('commandes/index.html.twig', [
+            'controller_name' => 'CommandesController',
         ]);
     }
 }

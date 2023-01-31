@@ -20,9 +20,10 @@
 		</div>
 	</div>
 
-    <div class="col-12 d-lg-none sticky-mobile" id="mobile-search-bar-sticky">     
+    <div class="col-12 d-lg-none sticky-mobile" id="mobile-search-bar-sticky" style="padding:8px !important;">     
         {% include "components/base/mobile-menu-search.html.twig" %}           
     </div>
+
 
 </div>
 
@@ -35,7 +36,7 @@
             var search = document.querySelector('#mobile-search-bar-sticky')
 
         if ( el == 'scroll') {
-                search.classList.remove('d-none')              
+                           
             
         } else {
             const max = window.innerWidth <= 750

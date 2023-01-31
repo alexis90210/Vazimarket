@@ -1,30 +1,37 @@
+{% if hide_sticky_menu_bottom is defined and hide_sticky_menu_bottom  == true %}
 <div class="sticky-footer sticky-content fix-bottom">
-			<a href="market2.html" class="sticky-link">
-				<i class="d-icon-home"></i>
-				<span>Accueil</span>
-			</a>
-			<a href="market2-shop.html" class="sticky-link">
-				<i class="d-icon-volume"></i>
-				<span>Categories</span>
-			</a>
-			<a href="wishlist.html" class="sticky-link">
-				<i class="d-icon-heart"></i>
-				<span>Souhaits</span>
-			</a>
-			<a href="account.html" class="sticky-link">
-				<i class="d-icon-user"></i>
-				<span>Compte</span>
-			</a>
-			<div class="header-search hs-toggle dir-up">
-				<a href="#" class="search-toggle sticky-link">
-					<i class="d-icon-search"></i>
-					<span>Recherche</span>
-				</a>
-				<form action="#" class="input-wrapper">
-					<input type="text" class="form-control" name="search" autocomplete="off" placeholder="Search your keyword..." required/>
-					<button class="btn btn-search" type="submit" title="submit-button">
-						<i class="d-icon-search"></i>
-					</button>
-				</form>
-			</div>
-		</div>
+	<a href="/" class="sticky-link btn ">
+		<i class="d-icon-jar"></i>
+		<span>Boutique</span>
+	</a>
+	<a href="/" class="sticky-link btn ">
+		<i class="d-icon-bag "></i>
+		<span>Ajouter au panier</span>
+	</a>
+	<a href="/cart" class="sticky-link btn btn-primary ">
+		<i class="d-icon-cash"></i>
+		<span>Acheter</span>
+	</a>
+</div>
+{% else %}
+
+<div class="sticky-footer sticky-content fix-bottom">
+	<a href="/" class="sticky-link">
+		<i class="d-icon-home"></i>
+		<span>Accueil</span>
+	</a>
+	<a href="/" class="sticky-link">
+		<i class="fa fa-envelope "></i>
+		<span>Messagerie</span>
+	</a>
+	<a href="/cart" class="sticky-link">
+		<i class="d-icon-bag"></i>
+		<span>Panier</span>
+	</a>
+	<a href="/compte" class="sticky-link">
+		<i class="d-icon-user"></i>
+		<span>compte</span>
+	</a>
+</div>
+
+{% endif %}

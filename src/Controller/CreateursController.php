@@ -6,13 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ProductController extends AbstractController
+#[Route('/dashboard')]
+class CreateursController extends AbstractController
 {
-    #[Route('/product', name: 'app_product')]
+    #[Route('/createurs', name: 'app_createurs')]
     public function index(): Response
     {
-        return $this->render('product/index.html.twig', [
-            'hide_sticky_menu_bottom' => true,
+        return $this->render('createurs/index.html.twig', [
+            'controller_name' => 'CreateursController',
         ]);
     }
 }
