@@ -1,0 +1,120 @@
+{% extends 'dashboard/_base.html.twig' %}
+
+{% block dashboardPageContent %}
+
+	<!-- start page title -->
+	<div class="page-title-box">
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col-sm-6">
+					<div class="page-title">
+						<h4>Toutes les Etiquettess</h4>
+						<ol class="breadcrumb m-0">
+							<li class="breadcrumb-item">
+								<a href="javascript: void(0);">Morvin</a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="javascript: void(0);">Marketplace</a>
+							</li>
+							<li class="breadcrumb-item active">Toutes les Etiquettes</li>
+						</ol>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="float-end d-none d-sm-block">
+						{# <a href="" class="btn btn-success">Ajouter une Etiquette</a> #}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end page title -->
+
+	<div class="container-fluid">
+
+		<div class="page-content-wrapper">
+			<div class="row">
+				
+				<div class="col-xl-8">
+					<div class="card m-b-30">
+						<div class="card-body">
+							<h4 class="mt-0 header-title mb-4">Etiquettes</h4>
+							<div class="table-responsive">
+								<table class="table table-centered table-nowrap table-hover mb-0">
+									<thead>
+										<tr>
+											<th scope="col">Nom</th>
+											<th scope="">Description</th>
+											<th scope="col">Slug</th>
+											<th scope="col">Actions</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										{% for item in [1,2,3,4,5] %}
+											<tr>
+												<td>
+													<h5 class="font-size-16">
+														Lorem </h5>
+												</td>
+												<td> Corrupti non quae repellat! ...</td>
+												<td>Lore_dolor
+												</td>
+
+												<td id="tooltip-container0">
+													<a href="javascript:void(0);" class="me-3 text-primary" data-bs-container="#tooltip-container0" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+														<i class="mdi mdi-pencil font-size-18"></i>
+													</a>
+													<a href="javascript:void(0);" class="text-danger" data-bs-container="#tooltip-container0" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+														<i class="mdi mdi-trash-can font-size-18"></i>
+													</a>
+												</td>
+											</tr>
+										{% endfor %}
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-4">
+					<div class="card">
+						<div class="card-body">
+						<p class="card-title-desc">Ajouter une etiquette</p>
+							<div class="mb-3">
+							<label for="">Nom</label>
+							<input type="text" class="form-control" id="Tarif" placeholder="Enter ">
+						</div>
+						<div class="mb-3">
+							<label for="">Slug</label>
+							<input type="text" class="form-control" id="" placeholder="Enter ">
+						</div>
+
+						<div class="mb-3">
+							<label for="">Description</label>
+							<input type="text" class="form-control" id="" placeholder="Enter ">
+						</div>
+
+						<button type="button" class="btn btn-primary waves-effect waves-light">Enregistrer</button>
+
+						</div>
+
+					</div>
+				</div>
+
+
+			</div>
+			<!-- END ROW -->
+
+
+			
+		</div>
+
+
+	</div>
+
+
+	<!-- container-fluid -->
+{% endblock %}

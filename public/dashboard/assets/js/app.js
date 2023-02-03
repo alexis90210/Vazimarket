@@ -19,22 +19,22 @@
       ? (n("html").removeAttr("dir"),
         n("#dark-mode-switch").prop("checked", !1),
         n("#rtl-mode-switch").prop("checked", !1),
-        n("#bootstrap-style").attr("href", "assets/css/bootstrap.min.css"),
-        n("#app-style").attr("href", "assets/css/app.min.css"),
+        n("#bootstrap-style").attr("href", "dashboard/assets/css/bootstrap.min.css"),
+        n("#app-style").attr("href", "dashboard/assets/css/app.min.css"),
         sessionStorage.setItem("is_visited", "light-mode-switch"))
       : 1 == n("#dark-mode-switch").prop("checked") && "dark-mode-switch" === e
       ? (n("html").removeAttr("dir"),
         n("#light-mode-switch").prop("checked", !1),
         n("#rtl-mode-switch").prop("checked", !1),
-        n("#bootstrap-style").attr("href", "assets/css/bootstrap-dark.min.css"),
-        n("#app-style").attr("href", "assets/css/app-dark.min.css"),
+        n("#bootstrap-style").attr("href", "dashboard/assets/css/bootstrap-dark.min.css"),
+        n("#app-style").attr("href", "dashboard/assets/css/app-dark.min.css"),
         sessionStorage.setItem("is_visited", "dark-mode-switch"))
       : 1 == n("#rtl-mode-switch").prop("checked") &&
         "rtl-mode-switch" === e &&
         (n("#light-mode-switch").prop("checked", !1),
         n("#dark-mode-switch").prop("checked", !1),
-        n("#bootstrap-style").attr("href", "assets/css/bootstrap-rtl.min.css"),
-        n("#app-style").attr("href", "assets/css/app-rtl.min.css"),
+        n("#bootstrap-style").attr("href", "dashboard/assets/css/bootstrap-rtl.min.css"),
+        n("#app-style").attr("href", "dashboard/assets/css/app-rtl.min.css"),
         n("html").attr("dir", "rtl"),
         sessionStorage.setItem("is_visited", "rtl-mode-switch"));
   }

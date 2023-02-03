@@ -1,3 +1,17 @@
+{# inline style #}
+<style>
+@media screen and (max-width:770px) {
+	.hide-on-mobile {
+		display:none !important;
+	}
+
+	.only-product {
+	display:none !important;
+}
+}
+</style>
+
+
 <div class="col-md-6">
 	<div class="product-details pt-3">
 		<h1 class="product-name">Chaussures de voyage à la mode</h1>
@@ -44,7 +58,7 @@
 					<input class="quantity form-control" type="number" min="1" max="1000000">
 					<button class="quantity-plus d-icon-plus"></button>
 				</div>
-				<button class="btn-product btn-cart text-normal ls-normal font-weight-semi-bold">
+				<button class="btn-product btn-cart text-normal ls-normal font-weight-semi-bold hide-on-mobile">
 					<i class="d-icon-bag"></i>Ajouter au panier</button>
 			</div>
 		</div>
@@ -62,8 +76,6 @@
 				<a href="#" class="btn-product btn-wishlist mr-6">
 					<i class="d-icon-heart"></i>Ajouter à la liste de souhaits</a>
 				<span class="divider"></span>
-				<a href="#" class="btn-product btn-compare">
-					<i class="d-icon-compare"></i>Comparer</a>
 			</div>
 		</div>
 	</div>

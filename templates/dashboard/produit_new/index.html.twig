@@ -1,0 +1,321 @@
+{% extends 'dashboard/_base.html.twig' %}
+
+{% block dashboardPageContent %}
+
+	<!-- start page title -->
+	<div class="page-title-box">
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col-sm-6">
+					<div class="page-title">
+						<h4>Ajouter un produits</h4>
+						<ol class="breadcrumb m-0">
+							<li class="breadcrumb-item">
+								<a href="javascript: void(0);">Morvin</a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="javascript: void(0);">Marketplace</a>
+							</li>
+							<li class="breadcrumb-item active">Ajouter un produits</li>
+						</ol>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="float-end d-none d-sm-block">
+						<a href="" class="btn btn-success">Valider l'ajout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end page title -->
+
+	<div class="container-fluid">
+
+		<div class="page-content-wrapper">
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-body">
+
+							<div id="addproduct-nav-pills-wizard" class="twitter-bs-wizard">
+								<ul class="twitter-bs-wizard-nav">
+									<li class="nav-item add-product-border">
+										<a href="#basic-info" class="nav-link" data-toggle="tab">
+											<span class="step-number">01. Description du produit</span>
+										</a>
+									</li>
+
+									<li class="nav-item add-product-border">
+										<a href="#Donnees-produit" class="nav-link" data-toggle="tab">
+											<span class="step-number">02. Donnees du produit</span>
+										</a>
+									</li>
+
+									<li class="nav-item add-product-border">
+										<a href="#product-img" class="nav-link" data-toggle="tab">
+											<span class="step-number">03. Gallerie du produit</span>
+										</a>
+									</li>
+
+									<li class="nav-item">
+										<a href="#metadata" class="nav-link" data-toggle="tab">
+											<span class="step-number">04. Catégories du produit</span>
+										</a>
+									</li>
+								</ul>
+								<!-- ebd ul -->
+								<div class="tab-content twitter-bs-wizard-tab-content">
+									<div class="tab-pane" id="basic-info">
+										<h4 class="header-title">Informations de base</h4>
+										<p class="card-title-desc">Remplissez toutes les informations ci-dessous</p>
+
+										<form>
+											<div class="mb-3">
+												<label class="form-label" for="productname">Nom du produit</label>
+												<input id="productname" name="productname" type="text" class="form-control" placeholder="Entrer le Nom du produit">
+											</div>
+
+
+											<div class="mb-3">
+												<label class="form-label" for="productdesc">Description</label>
+												<textarea class="form-control" id="productdesc" rows="5" placeholder="Enter Description"></textarea>
+											</div>
+										</form>
+
+										<ul class="pager wizard twitter-bs-wizard-pager-link">
+											<li class="next">
+												<a href="#">
+													Suivant
+													<i class="mdi mdi-arrow-right ms-1"></i>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<!-- end tabpane -->
+									<div class="tab-pane" id="Donnees-produit">
+										<form>
+											<div class="mb-3">
+												<label class="control-label">Type de produit</label>
+												<select class="form-control select2">
+													<option>Select</option>
+													<option value="EL">Simple</option>
+													<option value="FA">Variable</option>
+													<option value="FI">Fitness</option>
+												</select>
+											</div>
+
+											<div
+												id="smarttab">
+
+												<!-- Tabs -->
+												<ul class="nav">
+													<li>
+														<a class="nav-link" href="#tab-1">
+															General
+														</a>
+													</li>
+													<li>
+														<a class="nav-link" href="#tab-2">
+															Inventaire
+														</a>
+													</li>
+													<li>
+														<a class="nav-link" href="#tab-3">
+															Expedition
+														</a>
+													</li>
+													<li>
+														<a class="nav-link" href="#tab-4">
+															Attributs
+														</a>
+													</li>
+													<li>
+														<a class="nav-link" href="#tab-4">
+															Variations
+														</a>
+													</li>
+												</ul>
+
+												<!-- Tabbed Content -->
+												<div class="tab-content">
+													<div id="tab-1" class="tab-pane" role="tabpanel">
+
+														<div class="mb-3">
+															<label for="Tarif">Tarif régulier ($)</label>
+															<input type="text" class="form-control" id="Tarif" placeholder="Enter Tarif">
+														</div>
+														<div class="mb-3">
+															<label for="Tarif">Tarif promo ($)</label>
+															<input type="text" class="form-control" id="Tarif" placeholder="Enter Tarif">
+														</div>
+
+
+													</div>
+													<div id="tab-2" class="tab-pane" role="tabpanel">
+														<div class="mb-3">
+															<div class="form-check">
+																<label for="customControlInline">Gérer le stock ?</label>
+																<input type="checkbox" class="form-check-input" id="customControlInline">
+																<label class="form-label" for="customControlInline">Gérer le niveau de stock (quantité)</label>
+															</div>
+														</div>
+
+														<div class="mb-3">
+															<label for="">État du stock</label>
+															<select class="form-control select2">
+																<option>Select</option>
+																<option value="EL">En stock</option>
+																<option value="FA">En rupture de stock</option>
+																<option value="FI">En reapprovisionnement</option>
+															</select>
+														</div>
+														<div class="mb-3">
+															<div class="form-check">
+																<label for="customControlInline">Vendre individuellement</label>
+																<input type="checkbox" class="form-check-input" id="customControlInline">
+																<label class="form-label" for="customControlInline">Limiter les achats à 1 article par commande</label>
+															</div>
+														</div>
+
+
+													</div>
+													<div id="tab-3" class="tab-pane" role="tabpanel">
+														<div class="mb-3">
+															<label for="Tarif">Poids (kg)</label>
+															<input type="text" class="form-control" id="Tarif" placeholder="Enter Tarif">
+														</div>
+														<div class="mb-3">
+															<label for="Tarif">Dimensions (cm)</label>
+															<div class="d-flex gap-3">
+																<input type="text" class="form-control" id="Tarif" placeholder="Longueur">
+																<input type="text" class="form-control" id="Tarif" placeholder="Largeur">
+																<input type="text" class="form-control" id="Tarif" placeholder="Hauteur">
+															</div>
+														</div>
+													</div>
+
+													<div id="tab-4" class="tab-pane" role="tabpanel">
+														<div class="d-flex gap-3 mb-3 align-items-center">
+															<div class="">
+																<label for="">Attribut personnalisé du produit</label>
+																<select class="form-control select2">
+																	<option>Select</option>
+																	<option value="EL">Attribut 1</option>
+																	<option value="FA">Attribut 2</option>
+																	<option value="FI">Attribut 3</option>
+																</select>
+															</div>
+															<div class="pt-4">
+																<button type="button" class="btn btn-secondary waves-effect waves-light">Ajouter</button>
+															</div>
+														</div>
+														<hr>
+														<button type="button" class="btn btn-primary waves-effect waves-light">Enregistrer les attributs</button>
+													</div>
+												</div>
+
+											</div>
+
+
+										</form>
+
+										<ul class="pager wizard twitter-bs-wizard-pager-link">
+											<li class="next">
+												<a href="#">
+													Suivant
+													<i class="mdi mdi-arrow-right ms-1"></i>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<!-- end tabpane -->
+									<div class="tab-pane" id="product-img">
+										<h4 class="header-title">Images du produit</h4>
+										<p class="card-title-desc">Télécharger l'image du produit</p>
+										<form action="/" method="post" class="dropzone">
+											<div class="fallback">
+												<input name="file" type="file" multiple/>
+											</div>
+
+											<div class="dz-message needsclick">
+												<div class="mb-3">
+													<i class="display-4 text-muted mdi mdi-cloud-download-outline"></i>
+												</div>
+
+												<h4>Drop files here or click to upload.</h4>
+											</div>
+										</form>
+										<ul class="pager wizard twitter-bs-wizard-pager-link">
+											<li class="previous">
+												<a href="#">
+													<i class="mdi mdi-arrow-left me-1"></i>
+													Basic Info</a>
+											</li>
+											<li class="next">
+												<a href="#">Meta Data
+													<i class="mdi mdi-arrow-right ms-1"></i>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="tab-pane" id="metadata">
+										<h4 class="header-title">Derniere etape</h4>
+										<p class="card-title-desc">Remplissez toutes les informations ci-dessous</p>
+
+										<form>
+											<div class="row">
+												<div class="col-12">
+													<div class="mb-3">
+														<label class="control-label">Les categories</label>
+
+														<select class="select2 form-control select2-multiple" multiple="multiple" data-placeholder="Choose ...">
+															<option value="TO">Cat 1</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="col-12">
+														<div class="mb-3">
+															<label class="control-label">Les etiquettes</label>
+
+															<select class="select2 form-control select2-multiple" multiple="multiple" data-placeholder="Choose ...">
+																<option value="TO">Et1 1</option>
+															</select>
+														</div>
+													</div>
+													<!-- end col -->
+												</div>
+											</form>
+											<!-- end form -->
+											<ul class="pager wizard twitter-bs-wizard-pager-link">
+												<li class="previous">
+													<a href="#">
+														<i class="mdi mdi-arrow-left me-1"></i>
+														Retour</a>
+												</li>
+												<li class="float-end">
+													<a href="#">Enregistrer le produit
+														<i class="mdi mdi-arrow-right ms-1"></i>
+													</a>
+												</li>
+											</ul>
+											<!-- end ul -->
+										</div>
+										<!-- end tabpane -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end row -->
+
+			</div>
+
+
+		</div>
+
+	{% endblock %}

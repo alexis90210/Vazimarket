@@ -1532,21 +1532,21 @@ window.Riode = {};
    * @function initPurchasedMinipopup
    */
   Riode.initPurchasedMinipopup = function () {
-    setInterval(function () {
-      Riode.Minipopup.open(
-        {
-          message: "Quelqu'un a acheté",
-          productClass: "product-cart",
-          name: "Chaussures Daisy Sonia by Sonia-Bleu",
-          nameLink: "/product",
-          imageSrc: "theme/images/cart/product-1.jpg",
-          isPurchased: true,
-        },
-        function ($box) {
-          Riode.ratingTooltip($box[0]);
-        }
-      );
-    }, 60000);
+    // setInterval(function () {
+    //   Riode.Minipopup.open(
+    //     {
+    //       message: "Quelqu'un a acheté",
+    //       productClass: "product-cart",
+    //       name: "Chaussures Daisy Sonia by Sonia-Bleu",
+    //       nameLink: "/product",
+    //       imageSrc: "theme/images/cart/product-1.jpg",
+    //       isPurchased: true,
+    //     },
+    //     function ($box) {
+    //       Riode.ratingTooltip($box[0]);
+    //     }
+    //   );
+    // }, 60000);
   };
 
   /**

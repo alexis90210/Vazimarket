@@ -8,6 +8,7 @@
     background-color: white;
 }
 
+
 @media (max-width:800px) {
     .disp-none-xs {
         display: none !important;

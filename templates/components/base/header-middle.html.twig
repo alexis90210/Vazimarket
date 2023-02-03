@@ -1,11 +1,55 @@
-<div class="header-middle">
+<style>
+.fix-menu-search {
+	background-color: #fff;
+	display:none;
+}
+
+.only-mobile {
+	display:none;
+}
+
+
+@media screen and (max-width: 770px) {
+	.header-middle-fixed {
+		position:fixed;
+		z-index:99;
+		width:100%;
+	}
+
+	.fix-menu-search {
+		display:block;
+	}
+	
+	.min-mobile {
+		font-size:22px !important;
+	}
+
+	.mobile-menu {
+		width:90px;
+	}
+
+	.header-search-hide-mobile {
+		display:block;
+	}
+
+
+}
+
+</style>
+
+<div class="header-middle-fixed">
+
+	<div class="header-middle" style="height:70px">
 	<div class="container">
 		<div class="header-left mr-4">
+		    <a href="/" class="only-on-product">
+				<i class="d-icon-angle-left min-mobile"></i>
+			</a>
 			<a href="#" class="mobile-menu-toggle">
-				<i class="d-icon-bars2"></i>
+				<i class="d-icon-bars2 min-mobile"></i>
 			</a>
 			<a href="/" class="logo">
-				<img src="{{ asset('theme/images/demos/demo-market2/logo.png') }}" alt="logo" width="153" height="44"/>
+				<img src="{{ asset('theme/images/demos/demo-market2/logo.png') }}" alt="logo" width="120" height="44" class="mobile-menu"/>
 			</a>
 			<!-- End Logo -->
 
@@ -20,7 +64,7 @@
 							<option value="Style de vie">Style de vie</option>
 						</select>
 					</div>
-					<input type="text" class="form-control" name="search" autocomplete="off" placeholder="Recherche..." required/>
+					<input type="text" class="form-control" name="search" autocomplete="off" placeholder="Recherche...." required/>
 					<button class="btn btn-search" type="submit" title="submit-button">
 						<i class="d-icon-search"></i>
 					</button>
@@ -30,8 +74,12 @@
 		</div>
 		<div class="header-right">
 			<div class="icon-box icon-box-side never-clear">
+				<div class="icon-box-icon mr-0 mr-3 only-mobile only-product" onclick="toggleSearch()">
+					<a ><i class="d-icon-search min-mobile"></i></a>
+				</div>
+
 				<div class="icon-box-icon mr-0 mr-lg-2">
-					<a href="/compte"><i class="d-icon-user"></i></a>
+					<a href="/compte"><i class="d-icon-user min-mobile"></i></a>
 				</div>
 				<div class="icon-box-content d-lg-show">
 					<h4 class="icon-box-title text-dark text-normal">
@@ -43,69 +91,7 @@
 				</div>
 			</div>
 			<span class="divider mr-4"></span>
-			<div class="dropdown compare-dropdown off-canvas mr-xl-7 mr-4  disp-none-xs">
-				<a href="#" class="compare compare-toggle mr-0" title="compare">
-					<i class="d-icon-compare"></i>
-				</a>
-				<div class="canvas-overlay"></div>
-				<!-- End Compare Toggle -->
-				<div class="dropdown-box scrollable">
-					<div class="canvas-header">
-						<h4 class="canvas-title">Comparer</h4>
-						<a href="#" class="btn btn-dark btn-link btn-icon-right btn-close">Fermer<i class="d-icon-arrow-right"></i>
-							<span class="sr-only">Comparer</span>
-						</a>
-					</div>
-					<div class="products scrollable">
-						<div class="product product-compare">
-							<figure class="product-media">
-								<a href="/product">
-									<img src="{{ asset('theme/images/compare/product-1.jpg') }}" alt="product" width="80" height="88"/>
-								</a>
-								<button class="btn btn-link btn-close">
-									<i class="fas fa-times"></i>
-									<span class="sr-only">Fermer</span>
-								</button>
-							</figure>
-							<div class="product-detail">
-								<a href="/product" class="product-name">Vazimarket Tendances blanches</a>
-								<div class="price-box">
-									<span class="product-price">$21.00
-										<del class="old-price pl-1">$40.00</del>
-									</span>
-								</div>
-							</div>
-
-						</div>
-						<!-- End of Compare Product -->
-						<div class="product product-compare">
-							<figure class="product-media">
-								<a href="/product">
-									<img src="{{ asset('theme/images/compare/product-2.jpg') }}" alt="product" width="80" height="88"/>
-								</a>
-								<button class="btn btn-link btn-close">
-									<i class="fas fa-times"></i>
-									<span class="sr-only">Fermer</span>
-								</button>
-							</figure>
-							<div class="product-detail">
-								<a href="/product" class="product-name">Bleu foncé Femme, Chapeau de Léomora</a>
-								<div class="price-box">
-									<span class="product-price">$118.00
-										<del class="old-price pl-1">$158.99</del>
-									</span>
-								</div>
-							</div>
-						</div>
-						<!-- End of Compare Product -->
-					</div>
-					<a href="compare.html" class="btn btn-dark compare-btn mt-4">
-						<span>Aller à la liste de comparaison</span>
-					</a>
-					<!-- End of Products  -->
-				</div>
-				<!-- End Dropdown Box -->
-			</div>
+	
 			<div class="dropdown wishlist wishlist-dropdown off-canvas  disp-none-xs">
 				<a href="wishlist.html" class="wishlist-toggle" title="wishlist">
 					<i class="d-icon-heart"></i>
@@ -191,7 +177,7 @@
 						<span class="cart-name">Panier :</span>
 						<span class="cart-price">$0.00</span>
 					</div>
-					<i class="d-icon-bag">
+					<i class="d-icon-bag min-mobile">
 						<span class="cart-count">2</span>
 					</i>
 				</a>
@@ -264,3 +250,17 @@
 		</div>
 	</div>
 </div>
+
+<div class="fix-menu-search">
+	<div class="mSearch  pb-3">
+	{% include "/components/base/mobile-menu-search.html.twig" %}
+	</div>
+</div>
+</div>
+
+<script>
+function toggleSearch() {
+	console.log( 'ok' )
+	document.querySelector('.mSearch').classList.toggle('d-none')
+}
+</script>
